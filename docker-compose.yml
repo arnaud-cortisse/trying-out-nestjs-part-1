@@ -11,6 +11,7 @@ services:
       - 3001:3001
     volumes:
       - ./packages/nestjs/:/app
+      - /app/node_modules
 
   react_app:
     build:
@@ -22,6 +23,7 @@ services:
       - 3000:3000
     volumes:
       - ./packages/react-app/:/app
+      - /app/node_modules
 
   postgres:
     image: postgres:13.1
